@@ -85,43 +85,42 @@
                         <h2>libros</h2>
                     </header>
 
-                    <asp:TextBox ID="Txtbuscar"  CssClass="input" runat="server" ToolTip="Buscar Referencia" MaxLength="5" placeholder="buscar"></asp:TextBox>
+                    <asp:TextBox ID="Txtbuscar" CssClass="input" runat="server" ToolTip="Buscar Referencia" MaxLength="5" placeholder="buscar"></asp:TextBox>
                     <asp:Button ID="btnbuscar" runat="server" Text="buscar" ToolTip="buscar" OnClick="btnbuscar_Click" />
 
                     <asp:Label ID="lblmensaje" runat="server" Text=""></asp:Label>
-                    <asp:GridView ID="DGridlibros" runat="server"></asp:GridView>   
-                     <div class="col-md-4">
-                        
-                        <div class="col-md-1">
-                    <asp:RegularExpressionValidator ID="IDnombrelibro" runat="server" ControlToValidate="TxtNombrelibro" ErrorMessage="EL NOMBRE NO PUEDE PASAR DE LOS 20 CARACTERES Y TENER UN MINIMO DE 3 CARACTERES" SetFocusOnError="True" ValidationExpression=".{3}.*"></asp:RegularExpressionValidator><br />
-                      <asp:RegularExpressionValidator ID="IDGeneroLibro" runat="server" ControlToValidate="TxtGenero" ErrorMessage="EL NOMBRE NO PUEDE PASAR DE LOS 30 CARACTERES Y TENER UN MINIMO DE 3 CARACTERES" SetFocusOnError="True" ValidationExpression=".{3}.*"></asp:RegularExpressionValidator><br />
-                    <asp:RegularExpressionValidator ID="IDPrecioLibro" runat="server" ControlToValidate="TxtPrecio" ErrorMessage="Recuerde que sólo se puede ingresar números, minumo 1 maximo 9" SetFocusOnError="True" ValidationExpression=".{2}.*"></asp:RegularExpressionValidator>
- </div>
+                    <asp:GridView ID="DGridlibros" runat="server"></asp:GridView>
+                    <div class="col-md-4">
 
-                       
-                        
+                        <div class="col-md-1">
+                            <asp:RegularExpressionValidator ID="IDnombrelibro" runat="server" ControlToValidate="TxtNombrelibro" ErrorMessage="EL NOMBRE NO PUEDE PASAR DE LOS 20 CARACTERES Y TENER UN MINIMO DE 3 CARACTERES" SetFocusOnError="True" ValidationExpression=".{3}.*"></asp:RegularExpressionValidator><br />
+                            <asp:RegularExpressionValidator ID="IDGeneroLibro" runat="server" ControlToValidate="TxtGenero" ErrorMessage="EL NOMBRE NO PUEDE PASAR DE LOS 30 CARACTERES Y TENER UN MINIMO DE 3 CARACTERES" SetFocusOnError="True" ValidationExpression=".{3}.*"></asp:RegularExpressionValidator><br />
+                            <asp:RegularExpressionValidator ID="IDPrecioLibro" runat="server" ControlToValidate="TxtPrecio" ErrorMessage="Recuerde que sólo se puede ingresar números, minumo 1 maximo 9" SetFocusOnError="True" ValidationExpression=".{2}.*"></asp:RegularExpressionValidator>
+                        </div>
+
+
+
                     </div>
 
- <div class="col-md-4">
-                        
-                        <div class="col-md-1">
-                    <asp:TextBox ID="TxtNombrelibro"  CssClass="input" placeholder="Ingrese Nombre del libro." MaxLength="20" runat="server"></asp:TextBox>
-                     
-                    <asp:TextBox ID="TxtGenero" CssClass="input" placeholder="Ingrese Genero del libro" MaxLength="30"   runat="server"></asp:TextBox>
-                  
-                    <asp:TextBox ID="TxtPrecio" CssClass="input" placeholder="Ingrese precio." MaxLength="9" runat="server"></asp:TextBox>
-                                            </div>
-                        <div class="col-md-1">
- </div>
+                    <div class="col-md-4">
 
-                       
-                        
+                        <div class="col-md-1">
+                            <asp:TextBox ID="TxtNombrelibro" CssClass="input" placeholder="Ingrese Nombre del libro." MaxLength="20" runat="server"></asp:TextBox>
+                             <br />
+                            <asp:TextBox ID="TxtGenero" CssClass="input" placeholder="Ingrese Genero del libro" MaxLength="30" runat="server"></asp:TextBox>
+                             <br />
+                            <asp:TextBox ID="TxtPrecio" CssClass="input" placeholder="Ingrese precio." MaxLength="9" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+
+
+
                     </div>
+                    <br />
                     <asp:Button ID="BtnAgregar" runat="server" Text="Agregar" OnClick="BtnAgregar_Click" />
                     <asp:Button ID="BtnActualizar" runat="server" Text="Actualizar" OnClick="BtnActualizar_Click" />
                     <%--<asp:Button ID="BtnEliminar" runat="server" Text="Eliminar" />--%>
-                    
-
                 </div>
 
             </section>

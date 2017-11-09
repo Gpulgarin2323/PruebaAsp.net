@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:5448/Usuario.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Usuario.xsd" MetadataType="Schema" ID="25c312f7-2afa-4d6e-b318-556d818f5d22" SourceId="1" SourceUrl="http://localhost:5448/Usuario.svc?xsd=xsd2" />
+    <MetadataFile FileName="Usuario.disco" MetadataType="Disco" ID="646f4e04-e812-444e-926a-493db672791d" SourceId="1" SourceUrl="http://localhost:5448/Usuario.svc?disco" />
     <MetadataFile FileName="Usuario1.xsd" MetadataType="Schema" ID="9039b7fd-da60-4f0b-8291-754c8b3ebe17" SourceId="1" SourceUrl="http://localhost:5448/Usuario.svc?xsd=xsd1" />
     <MetadataFile FileName="Usuario2.xsd" MetadataType="Schema" ID="eb9673de-8991-4d95-8d98-5ddcecc4ccdb" SourceId="1" SourceUrl="http://localhost:5448/Usuario.svc?xsd=xsd0" />
     <MetadataFile FileName="Usuario.wsdl" MetadataType="Wsdl" ID="f152b77d-3f74-45bc-9dc6-024695cebb17" SourceId="1" SourceUrl="http://localhost:5448/Usuario.svc?wsdl" />
-    <MetadataFile FileName="Usuario.disco" MetadataType="Disco" ID="646f4e04-e812-444e-926a-493db672791d" SourceId="1" SourceUrl="http://localhost:5448/Usuario.svc?disco" />
+    <MetadataFile FileName="Usuario.xsd" MetadataType="Schema" ID="25c312f7-2afa-4d6e-b318-556d818f5d22" SourceId="1" SourceUrl="http://localhost:5448/Usuario.svc?xsd=xsd2" />
+    <MetadataFile FileName="Usuario3.xsd" MetadataType="Schema" ID="4211aa47-a9c2-4303-b77c-de36e85aa50b" SourceId="1" SourceUrl="http://localhost:5448/Usuario.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

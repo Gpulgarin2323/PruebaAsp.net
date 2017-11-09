@@ -19,7 +19,15 @@ namespace PruebaAsp.net
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //lblusuario.Text = Session["UsuarioInicio"].ToString();           
+            if (Session["UsuarioInicio"] == null)
+            {
+                Response.Redirect("login.aspx");
+            }
+            else
+            {
+                lblusuario.Text = Session["UsuarioInicio"].ToString();
+            }
+                    
             CargarLibros();
         }
 
@@ -28,9 +36,7 @@ namespace PruebaAsp.net
             try
             {
 
-          
-
-
+         
             DataSet ds = new DataSet();
             if (Txtbuscar.Text.Trim() == "")
             {

@@ -22,10 +22,10 @@ namespace PruebaAsp.net.WCFUsuarios {
         System.Threading.Tasks.Task<bool> GetInsertarUsuarioAsync(string[] oent);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/GetVerificarUsuario", ReplyAction="http://tempuri.org/IUsuario/GetVerificarUsuarioResponse")]
-        bool GetVerificarUsuario(string[] oent);
+        System.Data.DataSet GetVerificarUsuario(string[] oent);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuario/GetVerificarUsuario", ReplyAction="http://tempuri.org/IUsuario/GetVerificarUsuarioResponse")]
-        System.Threading.Tasks.Task<bool> GetVerificarUsuarioAsync(string[] oent);
+        System.Threading.Tasks.Task<System.Data.DataSet> GetVerificarUsuarioAsync(string[] oent);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,11 +63,11 @@ namespace PruebaAsp.net.WCFUsuarios {
             return base.Channel.GetInsertarUsuarioAsync(oent);
         }
         
-        public bool GetVerificarUsuario(string[] oent) {
+        public System.Data.DataSet GetVerificarUsuario(string[] oent) {
             return base.Channel.GetVerificarUsuario(oent);
         }
         
-        public System.Threading.Tasks.Task<bool> GetVerificarUsuarioAsync(string[] oent) {
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetVerificarUsuarioAsync(string[] oent) {
             return base.Channel.GetVerificarUsuarioAsync(oent);
         }
     }

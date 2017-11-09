@@ -39,14 +39,15 @@ namespace PruebaAsp.net
             }
             else
             {
+                DataSet ds = new DataSet();
                 OentUsuario.NickUsuarios = txtusername.Text;
                 OentUsuario.PassUsuarios = txtpassword.Text;
                 string[] oent = { OentUsuario.NickUsuarios, OentUsuario.PassUsuarios };
                 
-                bool result = WCFUsuarios.GetVerificarUsuario(oent);
-                if (result == true)
+                ds=  WCFUsuarios.GetVerificarUsuario(oent);
+                if (ds.Tables[0].Rows.Count == 1)
                 {
-                    Session["UsuarioInicio"] = txtusername.Text;
+                    Session["UsuarioInicio"] = ds.Tables[0].Rows[0]["Nombre completo"].ToString();
                     Response.Redirect("Index.aspx");
                 }
                 else
