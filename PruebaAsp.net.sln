@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaAsp.net", "PruebaAsp.net\PruebaAsp.net.csproj", "{60A70BD1-5713-4A2B-8C17-0D703EA07E44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "CapaEntidades\CapaEntidades.csproj", "{8C309309-7144-4956-B486-F8A9FABD29BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60A70BD1-5713-4A2B-8C17-0D703EA07E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A70BD1-5713-4A2B-8C17-0D703EA07E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A70BD1-5713-4A2B-8C17-0D703EA07E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A70BD1-5713-4A2B-8C17-0D703EA07E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C309309-7144-4956-B486-F8A9FABD29BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C309309-7144-4956-B486-F8A9FABD29BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C309309-7144-4956-B486-F8A9FABD29BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C309309-7144-4956-B486-F8A9FABD29BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {393FA877-7995-4EAC-8AC2-827D3DF36C56}
+	EndGlobalSection
+EndGlobal

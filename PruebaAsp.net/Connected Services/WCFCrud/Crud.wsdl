@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Crud" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:5448/Crud.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:5448/Crud.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5448/Crud.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:5448/Crud.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICrud_GetConsultarLibros_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultarLibros" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetConsultarLibros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultarLibrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetInsertarLibro_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertarLibro" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetInsertarLibro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsertarLibroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetActualizarLibro_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActualizarLibro" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetActualizarLibro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActualizarLibroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetEliminarLibro_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEliminarLibro" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetEliminarLibro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEliminarLibroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetConsultarLibroids_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultarLibroids" />
+  </wsdl:message>
+  <wsdl:message name="ICrud_GetConsultarLibroids_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsultarLibroidsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICrud">
+    <wsdl:operation name="GetConsultarLibros">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrud/GetConsultarLibros" message="tns:ICrud_GetConsultarLibros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrud/GetConsultarLibrosResponse" message="tns:ICrud_GetConsultarLibros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertarLibro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrud/GetInsertarLibro" message="tns:ICrud_GetInsertarLibro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrud/GetInsertarLibroResponse" message="tns:ICrud_GetInsertarLibro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActualizarLibro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrud/GetActualizarLibro" message="tns:ICrud_GetActualizarLibro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrud/GetActualizarLibroResponse" message="tns:ICrud_GetActualizarLibro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEliminarLibro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrud/GetEliminarLibro" message="tns:ICrud_GetEliminarLibro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrud/GetEliminarLibroResponse" message="tns:ICrud_GetEliminarLibro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultarLibroids">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrud/GetConsultarLibroids" message="tns:ICrud_GetConsultarLibroids_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrud/GetConsultarLibroidsResponse" message="tns:ICrud_GetConsultarLibroids_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICrud" type="tns:ICrud">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetConsultarLibros">
+      <soap:operation soapAction="http://tempuri.org/ICrud/GetConsultarLibros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsertarLibro">
+      <soap:operation soapAction="http://tempuri.org/ICrud/GetInsertarLibro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActualizarLibro">
+      <soap:operation soapAction="http://tempuri.org/ICrud/GetActualizarLibro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEliminarLibro">
+      <soap:operation soapAction="http://tempuri.org/ICrud/GetEliminarLibro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsultarLibroids">
+      <soap:operation soapAction="http://tempuri.org/ICrud/GetConsultarLibroids" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Crud">
+    <wsdl:port name="BasicHttpBinding_ICrud" binding="tns:BasicHttpBinding_ICrud">
+      <soap:address location="http://localhost:5448/Crud.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
